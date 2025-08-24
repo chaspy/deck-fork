@@ -139,29 +139,10 @@ To use this presentation, specify it with the `--presentation-id` flag or add it
 
 ### Write deck in markdown
 
-> [!IMPORTANT]  
-> **Page Separator**: Use `---` on its own line to separate slides. This is the most important rule for deck!
-
 The slide pages are separated by a line containing only three or more consecutive hyphens (`---`, `----`, etc.) from the beginning to the end of the line.
 
-**Example:**
-```markdown
-# First Slide
-Content for slide 1
-
----
-
-# Second Slide  
-Content for slide 2
-
----
-
-# Third Slide
-Content for slide 3
-```
-
 > [!NOTE]
-> The `---` at the beginning of the markdown (frontmatter delimiter) is ignored.
+> The `---` at the beginning of the markdown is ignored.
 >
 > Other horizontal rule elements (like `- - -`, `***`, `___`) are not treated as page separators but remain in the content as visual separators for multiple body placeholders.
 
