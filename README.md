@@ -15,6 +15,86 @@
 - **Separate content and design**
     - Markdown for content, Google Slides for design.
 
+## Install
+
+**Homebrew:**
+
+```console
+$ brew install deck
+```
+
+**go install:**
+
+```console
+$ go install github.com/k1LoW/deck/cmd/deck@latest
+```
+
+**manually:**
+
+Download binary from [releases page](https://github.com/k1LoW/deck/releases)
+
+## Quick Start
+
+Here's the fastest way to get started with deck:
+
+### 1. Install deck
+Choose your preferred installation method above.
+
+### 2. Set up Google Slides API credentials
+- Go to [Google Cloud Console](https://console.cloud.google.com)
+- Create a new project or select an existing one
+- Enable [Google Slides API](https://console.cloud.google.com/apis/library/slides.googleapis.com) and [Google Drive API](https://console.cloud.google.com/apis/library/drive.googleapis.com)
+- Create OAuth credentials (Desktop app type)
+- Download and save as `~/.local/share/deck/credentials.json`
+
+### 3. Create your first presentation
+```console
+$ deck new my-presentation.md --title "My First Deck"
+```
+
+### 4. Edit the markdown file
+Add your content to `my-presentation.md`. **Pages are separated by `---` on its own line**:
+
+```markdown
+---
+presentationID: auto-generated-id
+title: My First Deck
+---
+
+# Welcome to My Presentation
+
+This is the first slide.
+
+---
+
+# Second Slide
+
+This is the second slide with:
+- Bullet points
+- **Bold text**
+- And more content
+
+---
+
+# Thank You
+
+Questions?
+```
+
+### 5. Apply changes to Google Slides
+```console
+$ deck apply my-presentation.md
+```
+
+### 6. Open in browser
+```console
+$ deck open my-presentation.md
+```
+
+> 💡 **Tip**: Use `--watch` flag to automatically apply changes as you edit: `deck apply --watch my-presentation.md`
+
+For a complete example, see [example.md](example.md).
+
 ## Usage
 
 ### Setup
@@ -87,10 +167,29 @@ To use this presentation, specify it with the `--presentation-id` flag or add it
 
 ### Write deck in markdown
 
+> [!IMPORTANT]  
+> **Page Separator**: Use `---` on its own line to separate slides. This is the most important rule for deck!
+
 The slide pages are separated by a line containing only three or more consecutive hyphens (`---`, `----`, etc.) from the beginning to the end of the line.
 
+**Example:**
+```markdown
+# First Slide
+Content for slide 1
+
+---
+
+# Second Slide  
+Content for slide 2
+
+---
+
+# Third Slide
+Content for slide 3
+```
+
 > [!NOTE]
-> The `---` at the beginning of the markdown is ignored.
+> The `---` at the beginning of the markdown (frontmatter delimiter) is ignored.
 >
 > Other horizontal rule elements (like `- - -`, `***`, `___`) are not treated as page separators but remain in the content as visual separators for multiple body placeholders.
 
@@ -673,24 +772,6 @@ By collaborating with AI agents to create Markdown-formatted slides, you may be 
     - Code blocks can be converted to images using the `--code-block-to-image-command` option
 
 </details>
-
-## Install
-
-**Homebrew:**
-
-```console
-$ brew install deck
-```
-
-**go install:**
-
-```console
-$ go install github.com/k1LoW/deck/cmd/deck@latest
-```
-
-**manually:**
-
-Download binary from [releases page](https://github.com/k1LoW/deck/releases)
 
 ## Alternatives
 
