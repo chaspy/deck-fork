@@ -43,53 +43,29 @@ Choose your preferred installation method above.
 ### 2. Set up Google Slides API credentials
 See [detailed setup instructions](#get-and-set-your-oauth-client-credentials) for OAuth credentials configuration.
 
-### 3. Create your first presentation
+### 3. Try the example presentation
+Use our ready-made `example.md` to get started quickly:
+
 ```console
-$ deck new my-presentation.md --title "My First Deck"
+$ deck new example.md --title "Product Launch Presentation"
 ```
 
-### 4. Edit the markdown file
-Add your content to `my-presentation.md`. **Pages are separated by `---` on its own line**:
-
-```markdown
----
-presentationID: auto-generated-id
-title: My First Deck
----
-
-# Welcome to My Presentation
-
-This is the first slide.
-
----
-
-# Second Slide
-
-This is the second slide with:
-- Bullet points
-- **Bold text**
-- And more content
-
----
-
-# Thank You
-
-Questions?
-```
-
-### 5. Apply changes to Google Slides
+### 4. Apply the example to Google Slides (with live updates)
 ```console
-$ deck apply my-presentation.md
+$ deck apply --watch example.md
 ```
 
-### 6. Open in browser
+### 5. Open in browser
 ```console
-$ deck open my-presentation.md
+$ deck open example.md
 ```
 
-> 💡 **Tip**: Use `--watch` flag to automatically apply changes as you edit: `deck apply --watch my-presentation.md`
+You'll see a complete product launch presentation with various deck features! Now try editing `example.md` and watch the slides update in real-time. 🎉
 
-For a complete example, see [example.md](example.md).
+### Next steps
+- Edit `example.md` to customize the content and see live updates
+- Learn about [markdown syntax](#write-deck-in-markdown) and [page configuration](#page-config)
+- Create your own presentations with `deck new your-file.md`
 
 ## Usage
 
