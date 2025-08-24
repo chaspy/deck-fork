@@ -41,11 +41,7 @@ Here's the fastest way to get started with deck:
 Choose your preferred installation method above.
 
 ### 2. Set up Google Slides API credentials
-- Go to [Google Cloud Console](https://console.cloud.google.com)
-- Create a new project or select an existing one
-- Enable [Google Slides API](https://console.cloud.google.com/apis/library/slides.googleapis.com) and [Google Drive API](https://console.cloud.google.com/apis/library/drive.googleapis.com)
-- Create OAuth credentials (Desktop app type)
-- Download and save as `~/.local/share/deck/credentials.json`
+See [detailed setup instructions](#get-and-set-your-oauth-client-credentials) for OAuth credentials configuration.
 
 ### 3. Create your first presentation
 ```console
