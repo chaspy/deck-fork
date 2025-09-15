@@ -15,6 +15,58 @@
 - **Separate content and design**
     - Markdown for content, Google Slides for design.
 
+## Install
+
+**Homebrew:**
+
+```console
+$ brew install deck
+```
+
+**go install:**
+
+```console
+$ go install github.com/k1LoW/deck/cmd/deck@latest
+```
+
+**manually:**
+
+Download binary from [releases page](https://github.com/k1LoW/deck/releases)
+
+## Quick Start
+
+Here's the fastest way to get started with deck:
+
+### 1. Install deck
+Choose your preferred installation method above.
+
+### 2. Set up Google Slides API credentials
+See [detailed setup instructions](#get-and-set-your-oauth-client-credentials) for OAuth credentials configuration.
+
+### 3. Try the example presentation
+Use our ready-made `example.md` to get started quickly:
+
+```console
+$ deck new example.md --title "Product Launch Presentation"
+```
+
+### 4. Apply the example to Google Slides (with live updates)
+```console
+$ deck apply --watch example.md
+```
+
+### 5. Open in browser
+```console
+$ deck open example.md
+```
+
+You'll see a complete product launch presentation with various deck features! Now try editing `example.md` and watch the slides update in real-time. 🎉
+
+### Next steps
+- Edit `example.md` to customize the content and see live updates
+- Learn about [markdown syntax](#write-deck-in-markdown) and [page configuration](#page-config)
+- Create your own presentations with `deck new your-file.md`
+
 ## Usage
 
 ### Setup
@@ -673,24 +725,6 @@ By collaborating with AI agents to create Markdown-formatted slides, you may be 
     - Code blocks can be converted to images using the `--code-block-to-image-command` option
 
 </details>
-
-## Install
-
-**Homebrew:**
-
-```console
-$ brew install deck
-```
-
-**go install:**
-
-```console
-$ go install github.com/k1LoW/deck/cmd/deck@latest
-```
-
-**manually:**
-
-Download binary from [releases page](https://github.com/k1LoW/deck/releases)
 
 ## Alternatives
 
